@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Japanese Language & Culture Learning</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="title">Japanese Language & Culture Learning</div>
+    </div>
+
+    <div class="controls">
+      <button id="modeBtn" class="btn ghost" type="button">モード：スマホ</button>
+      <button id="restartBtn" class="btn" type="button" disabled>最初から</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <div class="meta">
+        <div id="progress">0 / 10</div>
+        <div id="score">正解：0</div>
+      </div>
+
+      <!-- ★追加：ファイル選択 -->
+      <div class="loader">
+        <label class="btn ghost" for="csvFile">ファイルをえらぶ</label>
+        <input id="csvFile" type="file" accept=".csv,text/csv" />
+        <div class="sub loaderNote">※ファイルを選択してください（ダブルクリック起動）</div>
+      </div>
+
+      <div id="question" class="q">「CSVをえらぶ」から questions.csv を選んでください。</div>
+
+      <div id="choices" class="choices"></div>
+
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+
+      <div class="bottom">
+        <button id="nextBtn" class="btn" type="button" disabled>つぎへ</button>
+      </div>
+    </section>
+
+    <section class="card side" id="sidePanel">
+      <div class="sideTitle">まちがいメモ</div>
+      <div id="wrongList" class="wrongList">まだありません。</div>
+      
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
